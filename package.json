@@ -1,0 +1,27 @@
+{
+  "name": "passport-purpose-api",
+  "version": "1.0.0",
+  "description": "Passport & Purpose API for MongoDB travel app class.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": [
+    "mongodb",
+    "express",
+    "mongoose",
+    "travel-api",
+    "education"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  }
+}

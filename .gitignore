@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+
+.gitignore.bak
+*.bak
+*.back
+
+server-old-backup.js
+server_old_backup.js
+
+package-old*.json
+package_old*.json
