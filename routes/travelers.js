@@ -1,17 +1,56 @@
-const mongoose = require("mongoose");
+const express = require("express");
+const router = express.Router();
+const Traveler = require("../models/Traveler");
 
-const connectDB = async () => {
+// GET all travelers
+router.get("/", async (req, res) => {
   try {
-    if (!process.env.MONGODB_URI) {
-      throw new Error("MONGODB_URI is missing. Check your .env file.");
-    }
-
-    await mongoose.connect(process.env.MONGODB_URI);
-    console.log("MongoDB connected successfully");
+    const travelers = await Traveler.find();
+    res.json(travelers);
   } catch (error) {
-    console.error("MongoDB connection failed:", error.message);
-    process.exit(1);
+    res.status(500).json({ message: error.message });
   }
-};
+});
 
-module.exports = connectDB;
+// GET travelers with passport true/false
+router.get("/passport/:status", async (req, res) => {
+  try {
+    const passportStatus = req.params.status === "true";
+
+    const travelers = await Traveler.find({
+      passport: passportStatus
+    });
+
+    res.json(travelers);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// GET travelers by city
+router.get("/city/:city", async (req, res) => {
+  try {
+    const travelers = await Traveler.find({
+      city: req.params.city
+    });
+
+    res.json(travelers);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// GET travelers by interest
+router.get("/interest/:interest", async (req, res) => {
+  try {
+    const travelers = await Traveler.find({
+      interests: req.params.interest
+    });
+
+    res.json(travelers);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+module.exports = router;
