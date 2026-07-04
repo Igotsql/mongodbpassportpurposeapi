@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Sankofa Café",
+    "city": "Accra",
+    "country": "Ghana",
+    "category": "Restaurant",
+    "blackOwned": true,
+    "rating": 4.9,
+    "website": "https://www.sankofacafe.com",
+    "tags": [
+      "Breakfast",
+      "Coffee",
+      "Traditional Food"
+    ]
+  },
+  {
+    "name": "Island Glow Boutique",
+    "city": "Kingston",
+    "country": "Jamaica",
+    "category": "Shopping",
+    "blackOwned": true,
+    "rating": 4.7,
+    "website": "https://www.islandglow.com",
+    "tags": [
+      "Fashion",
+      "Accessories",
+      "Handmade"
+    ]
+  }
+]

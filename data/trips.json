@@ -1,0 +1,24 @@
+[
+  {
+    "travelerName": "Alicia Johnson",
+    "destination": "Accra",
+    "country": "Ghana",
+    "departureDate": "2026-08-10",
+    "returnDate": "2026-08-18",
+    "tripType": "Cultural Experience",
+    "budget": 3200,
+    "hotel": "Accra Marriott",
+    "status": "Booked"
+  },
+  {
+    "travelerName": "Alicia Johnson",
+    "destination": "Kingston",
+    "country": "Jamaica",
+    "departureDate": "2026-12-20",
+    "returnDate": "2026-12-27",
+    "tripType": "Vacation",
+    "budget": 2500,
+    "hotel": "Ocean Coral Spring",
+    "status": "Planning"
+  }
+]

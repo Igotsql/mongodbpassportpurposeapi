@@ -1,34 +1,33 @@
 const express = require("express");
-const { MongoClient } = require("mongodb");
-require("dotenv").config();
+const cors = require("cors");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
+
+const travelerRoutes = require("./routes/travelers");
+const tripRoutes = require("./routes/trips");
+const businessRoutes = require("./routes/businesses");
+const reviewRoutes = require("./routes/reviews");
+
+dotenv.config();
 
 const app = express();
-const PORT = 3000;
 
-const client = new MongoClient(process.env.MONGO_URI);
+app.use(cors());
+app.use(express.json());
+
+connectDB();
 
 app.get("/", (req, res) => {
-    res.send("Welcome to the Passport & Purpose API!");
+  res.send("Passport & Purpose API is running");
 });
 
-app.get("/travelers", async (req, res) => {
-    try {
-        await client.connect();
+app.use("/api/travelers", travelerRoutes);
+app.use("/api/trips", tripRoutes);
+app.use("/api/businesses", businessRoutes);
+app.use("/api/reviews", reviewRoutes);
 
-        const database = client.db(process.env.DB_NAME);
-        const travelers = database.collection("travelers");
-
-        const results = await travelers.find({}).toArray();
-
-        res.json(results);
-    } catch (error) {
-        res.status(500).json({
-            message: "Error getting travelers",
-            error: error.message
-        });
-    }
-});
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });

@@ -1,0 +1,38 @@
+[
+  {
+    "firstName": "Alicia",
+    "lastName": "Johnson",
+    "age": 29,
+    "city": "Tampa",
+    "state": "Florida",
+    "passport": true,
+    "favoriteDestination": "Ghana",
+    "profession": "UX Designer",
+    "interests": [
+      "Travel",
+      "Food",
+      "Culture",
+      "Photography"
+    ]
+  },
+  {
+    "firstName": "Monique",
+    "lastName": "Carter",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "passport": true,
+    "favoriteDestination": "Jamaica",
+    "profession": "Website Designer",
+    "yearsInTech": 5,
+    "ownsBusiness": true,
+    "businessName": "Monique Digital Studio",
+    "interests": [
+      "Travel",
+      "Web Design",
+      "Coffee",
+      "Networking",
+      "Photography",
+      "Shopping"
+    ]
+  }
+]
