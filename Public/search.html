@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Passport & Purpose Data Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            max-width: 1000px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select,
+        input,
+        button {
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            width: 300px;
+        }
+
+        button {
+            cursor: pointer;
+            width: 160px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 12px;
+            background-color: #f9f9f9;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .error {
+            color: darkred;
+            font-weight: bold;
+        }
+
+        .success {
+            color: darkgreen;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Passport & Purpose Data Search</h1>
+
+    <p>
+        Use this form to pull data from the API and display it on the page.
+    </p>
+
+    <form id="searchForm">
+        <label for="dataType">Choose data to view</label><br>
+        <select id="dataType">
+            <option value="travelers">All Travelers</option>
+            <option value="trips">All Trips</option>
+            <option value="businesses">All Businesses</option>
+            <option value="reviews">All Reviews</option>
+            <option value="travelersByCity">Travelers by City</option>
+            <option value="travelersByInterest">Travelers by Interest</option>
+            <option value="tripsByCountry">Trips by Country</option>
+            <option value="businessesByCountry">Businesses by Country</option>
+            <option value="businessesBlackOwned">Black-Owned Businesses</option>
+            <option value="reviewsByRating">Reviews by Minimum Rating</option>
+        </select>
+
+        <br>
+
+        <label for="searchValue">Search value</label><br>
+        <input type="text" id="searchValue" placeholder="Example: Atlanta, Ghana, Photography, 4">
+
+        <br>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <p id="message"></p>
+
+    <div id="results"></div>
+
+    <p>
+        <a href="/">Back to Add Traveler Form</a>
+    </p>
+
+    <script>
+        const form = document.getElementById("searchForm");
+        const dataType = document.getElementById("dataType");
+        const searchValue = document.getElementById("searchValue");
+        const message = document.getElementById("message");
+        const results = document.getElementById("results");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            message.textContent = "";
+            message.className = "";
+            results.innerHTML = "";
+
+            const selectedType = dataType.value;
+            const value = searchValue.value.trim();
+
+            let endpoint = "";
+
+            if (selectedType === "travelers") {
+                endpoint = "/api/travelers";
+            }
+
+            if (selectedType === "trips") {
+                endpoint = "/api/trips";
+            }
+
+            if (selectedType === "businesses") {
+                endpoint = "/api/businesses";
+            }
+
+            if (selectedType === "reviews") {
+                endpoint = "/api/reviews";
+            }
+
+            if (selectedType === "travelersByCity") {
+                if (!value) {
+                    showError("Enter a city, such as Atlanta or Tampa.");
+                    return;
+                }
+
+                endpoint = "/api/travelers/city/" + encodeURIComponent(value);
+            }
+
+            if (selectedType === "travelersByInterest") {
+                if (!value) {
+                    showError("Enter an interest, such as Photography or Travel.");
+                    return;
+                }
+
+                endpoint = "/api/travelers/interest/" + encodeURIComponent(value);
+            }
+
+            if (selectedType === "tripsByCountry") {
+                if (!value) {
+                    showError("Enter a country, such as Ghana or Jamaica.");
+                    return;
+                }
+
+                endpoint = "/api/trips/country/" + encodeURIComponent(value);
+            }
+
+            if (selectedType === "businessesByCountry") {
+                if (!value) {
+                    showError("Enter a country, such as Ghana or Jamaica.");
+                    return;
+                }
+
+                endpoint = "/api/businesses/country/" + encodeURIComponent(value);
+            }
+
+            if (selectedType === "businessesBlackOwned") {
+                endpoint = "/api/businesses/black-owned";
+            }
+
+            if (selectedType === "reviewsByRating") {
+                if (!value) {
+                    showError("Enter a rating, such as 4 or 5.");
+                    return;
+                }
+
+                endpoint = "/api/reviews/rating/" + encodeURIComponent(value);
+            }
+
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+
+                if (!response.ok) {
+                    showError("The API returned an error.");
+                    return;
+                }
+
+                displayResults(data);
+            } catch (error) {
+                showError("Could not connect to the API.");
+            }
+        });
+
+        function displayResults(data) {
+            if (!Array.isArray(data) || data.length === 0) {
+                message.textContent = "No records found.";
+                message.className = "error";
+                return;
+            }
+
+            message.textContent = data.length + " record(s) found.";
+            message.className = "success";
+
+            data.forEach(function (item) {
+                const card = document.createElement("div");
+                card.className = "card";
+
+                const title = getCardTitle(item);
+
+                card.innerHTML = `
+          <h3>${title}</h3>
+          <pre>${JSON.stringify(item, null, 2)}</pre>
+        `;
+
+                results.appendChild(card);
+            });
+        }
+
+        function getCardTitle(item) {
+            if (item.firstName && item.lastName) {
+                return item.firstName + " " + item.lastName;
+            }
+
+            if (item.destination && item.country) {
+                return item.destination + ", " + item.country;
+            }
+
+            if (item.name) {
+                return item.name;
+            }
+
+            if (item.title) {
+                return item.title;
+            }
+
+            return "Record";
+        }
+
+        function showError(text) {
+            message.textContent = text;
+            message.className = "error";
+        }
+    </script>
+</body>
+
+</html>
