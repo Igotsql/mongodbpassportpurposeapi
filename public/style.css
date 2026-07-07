@@ -1,0 +1,98 @@
+/*
+Template Name: Banizzo - Digital Agency HTML5 Template
+Theme URI: https://codexup.com/
+Author: CodeXup
+Author URI: https://codexup.com/preview/banizzo/
+Description: 
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0.0
+*/.otaku-form {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.otaku-form input,
+.otaku-form textarea {
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.otaku-form textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.otaku-form input:focus,
+.otaku-form textarea:focus {
+    border-color: #f50366;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-form input {
+    margin-bottom: 0;
+}
+
+.otaku-table-wrap {
+    overflow-x: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.otaku-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Poppins", sans-serif;
+}
+
+.otaku-table th {
+    background: linear-gradient(180deg, #f50366 0%, #fc5904 100%);
+    color: #ffffff;
+    padding: 18px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.otaku-table td {
+    padding: 18px;
+    border-bottom: 1px solid #eeeeee;
+    vertical-align: top;
+}
+
+.otaku-table tr:hover {
+    background: #fff5f8;
+}
+
+@media only screen and (max-width: 767px) {
+    .otaku-form {
+        padding: 25px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+}

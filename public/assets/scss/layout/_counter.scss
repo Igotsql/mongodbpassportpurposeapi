@@ -1,0 +1,153 @@
+/*----------------------------------------*/
+/*  18. COUNTER CSS START
+/*----------------------------------------*/
+
+
+.counter {
+  &__area {
+    &-2 {
+      position: relative;
+      background-image: url(../imgs/bg/counter-bg-2.jpeg);
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .shape {
+        &-1 {
+          position: absolute;
+          top: 0;
+          left: 25%;
+          animation: moveBottom 5s infinite linear;
+        }
+
+        &-2 {
+          position: absolute;
+          bottom: 10px;
+          left: 60%;
+          animation: moveBottom 5s infinite linear;
+        }
+
+        &-3 {
+          position: absolute;
+          left: 35%;
+          top: 50%;
+          animation: cxuRipple 5s infinite linear;
+        }
+
+        &-4 {
+          position: absolute;
+          left: 80%;
+          top: 20%;
+          animation: cxuRipple 5s infinite linear;
+        }
+      }
+    }
+  }
+
+  &__inner {
+    padding: 50px 0;
+    border-top: 1px solid var(--gray-3);
+    border-bottom: 1px solid var(--gray-3);
+
+    @media #{$md} {
+      padding: 50px 0 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    @media #{$md} {
+      padding-bottom: 30px;
+    }
+
+    &-2 {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+
+      @media #{$sm} {
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  &__number {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--black-3);
+    flex-basis: 120px;
+
+    @media #{$lg} {
+      font-size: 32px;
+      flex-basis: 60px;
+    }
+
+    @media #{$sm} {
+      font-size: 40px;
+      flex-basis: 90px;
+    }
+
+    &-2 {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--white);
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black-3);
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    @media #{$lg} {
+      font-size: 14px;
+    }
+
+    &-2 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.5;
+      text-transform: uppercase;
+
+      @media #{$md} {
+        font-size: 14px;
+      }
+    }
+  }
+
+}
+
+
+
+// 
+// Dark Version
+// 
+.dark {
+  &.counter__area {
+    background-color: var(--dark);
+  }
+
+  .counter {
+    &__inner {
+      border-color: var(--dark-3);
+    }
+
+    &__number,
+    &__text {
+      color: var(--white);
+    }
+
+
+  }
+}

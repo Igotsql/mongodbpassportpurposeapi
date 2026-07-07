@@ -1,0 +1,283 @@
+/*----------------------------------------*/
+/*  14. HERO CSS START
+/*----------------------------------------*/
+
+
+.hero {
+  &__area {
+    background-image: url(../imgs/hero/hero-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 290px;
+    padding-bottom: 190px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @media #{$xxl} {
+      padding-top: 200px;
+      padding-bottom: 100px;
+    }
+
+    @media #{$sm} {
+      padding-top: 120px;
+      padding-bottom: 50px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .shape {
+      &-1 {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        animation: moveBottom 5s infinite linear;
+
+        @media #{$xxl} {
+          left: -40px;
+        }
+
+        @media #{$sm} {
+          max-width: 100px;
+        }
+      }
+
+      &-2 {
+        position: absolute;
+        bottom: 100px;
+        right: -30px;
+        animation: moveBottom 5s infinite linear;
+
+        @media #{$sm} {
+          max-width: 100px;
+        }
+      }
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 570px;
+      color: var(--gray-2);
+      padding-bottom: 50px;
+    }
+
+    &-2 {
+      background-image: url(../imgs/hero/bg-2.jpeg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 340px;
+      padding-bottom: 220px;
+      position: relative;
+      z-index: 1;
+
+      @media #{$xl} {
+        padding-top: 270px;
+      }
+
+      @media #{$lg} {
+        padding-top: 230px;
+      }
+
+      @media #{$md} {
+        padding-bottom: 150px;
+      }
+
+      @media #{$sm} {
+        padding-top: 200px;
+        padding-bottom: 120px;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      p {
+        font-size: 18px;
+        max-width: 570px;
+        color: var(--gray-2);
+        padding-bottom: 50px;
+      }
+    }
+
+    &.no-pb {
+      padding-bottom: 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__sub-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    padding-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 120px;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+
+    @media #{$xl} {
+      font-size: 90px;
+    }
+
+    @media #{$md} {
+      font-size: 60px;
+    }
+
+    @media #{$sm} {
+      font-size: 40px;
+      padding-bottom: 20px;
+    }
+
+    span {
+      color: var(--primary);
+    }
+  }
+
+  &__slider {
+    padding-bottom: 185px;
+
+    @media #{$xxl} {
+      padding-bottom: 100px;
+    }
+
+    @media #{$sm} {
+      padding-bottom: 50px;
+    }
+
+    .hero__content {
+      opacity: 0;
+      transition: all 0.5s;
+    }
+
+    .swiper-slide-active .hero__content {
+      opacity: 1;
+    }
+
+    .swiper-pagination {
+      bottom: 30px;
+
+      &-bullet {
+        width: 16px;
+        height: 16px;
+        opacity: 1;
+        background: var(--black-3);
+
+        &-active {
+          background: var(--white);
+        }
+      }
+    }
+
+  }
+}
+
+
+// Breadcrumb CSS
+.breadcrumb {
+  &__area {
+    background-image: url(../imgs/hero/bcrumb-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 240px;
+    padding-bottom: 140px;
+    position: relative;
+    z-index: 1;
+
+    @media #{$lg} {
+      padding-top: 180px;
+      padding-bottom: 100px;
+    }
+
+    @media #{$sm} {
+      padding-top: 120px;
+      padding-bottom: 60px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    p {
+      position: relative;
+      z-index: 1;
+
+      a {
+        color: var(--white);
+        font-size: 16px;
+        position: relative;
+        display: inline-block;
+        margin-right: 40px;
+        text-transform: capitalize;
+
+        &:hover {
+          color: var(--secondary);
+        }
+
+        &:nth-child(1) {
+          color: var(--primary);
+
+          &:hover {
+            color: var(--secondary);
+          }
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 11px;
+          height: 11px;
+          top: 6px;
+          right: -25px;
+          background-color: var(--white);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+      }
+
+      span {
+        color: var(--white);
+        font-size: 16px;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--white);
+    padding-bottom: 15px;
+
+    @media #{$sm} {
+      font-size: 36px;
+    }
+  }
+}

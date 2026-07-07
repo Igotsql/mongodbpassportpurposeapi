@@ -1,0 +1,271 @@
+/*----------------------------------------*/
+/*  27. CONTACT CSS START
+/*----------------------------------------*/
+
+
+.contact {
+  &__area {
+    position: relative;
+
+    .bg {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 500px;
+      height: 55%;
+      object-fit: cover;
+
+      @media #{$xl} {
+        width: 480px;
+      }
+
+      @media #{$md} {
+        display: none;
+      }
+    }
+
+    .map {
+      position: absolute;
+      width: 500px;
+      height: 45%;
+      right: 0;
+      bottom: 0;
+
+      @media #{$xl} {
+        width: 480px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media #{$md} {
+        position: unset;
+        width: 100%;
+        height: 360px;
+      }
+    }
+  }
+
+  &__top {
+
+    &-inner {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media #{$sm} {
+        grid-gap: 40px;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 9;
+
+    .icon {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 18px;
+      border-radius: 50px;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--black-2);
+      padding-bottom: 10px;
+    }
+
+    ul {
+      li {
+        font-size: 16px;
+        color: var(--gray);
+
+        a {
+          font-size: 16px;
+          color: var(--gray);
+          padding-bottom: 5px;
+          display: inline-block;
+          transition: all 0.3s;
+
+          &:hover {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+
+
+  &__form {
+    background-color: #F5F5F5;
+
+    .input-grp {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: 1fr 1fr;
+
+      @media #{$lg} {
+        grid-gap: 0;
+        grid-template-columns: 1fr;
+      }
+
+      @media #{$md} {
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media #{$sm} {
+        grid-gap: 0;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 5px;
+      outline: none;
+      margin-bottom: 20px;
+      border: 1px solid #F5F5F5;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    .submit {
+      width: unset;
+      color: var(--white);
+      text-transform: capitalize;
+      padding: 15px 40px;
+      background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 25%, var(--primary) 50%, var(--secondary) 75%, var(--primary) 100%);
+      background-size: 400% 400%;
+      background-repeat: no-repeat;
+      transition: all 0.7s;
+      margin-bottom: 0;
+
+      &:hover {
+        background-position: 100% 100%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black-2);
+    padding-bottom: 40px;
+  }
+}
+
+
+// FAQs
+.faq__left {
+  padding-right: 80px;
+
+  @media #{$xl} {
+    padding-right: 50px;
+  }
+
+  @media #{$lg} {
+    padding-right: 40px;
+  }
+
+  @media #{$md} {
+    padding-right: 20px;
+    padding-bottom: 50px;
+  }
+
+  @media #{$sm} {
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+}
+
+button.accordion-button {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.accordion-button {
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:not(.collapsed) {
+    color: var(--black-2);
+    background-color: transparent;
+  }
+}
+
+
+// 
+// Dark Version
+// 
+.dark {
+  .contact {
+    &__item {
+      .title {
+        color: var(--white);
+      }
+
+      ul li {
+        color: var(--gray-3);
+
+        a {
+          color: var(--gray-3);
+        }
+      }
+    }
+
+    &__form {
+      background-color: var(--dark-2);
+
+      input,
+      textarea {
+        color: var(--white);
+        border-color: var(--gray);
+        background-color: transparent;
+      }
+
+      .submit {
+        border: none;
+      }
+    }
+
+    &__title {
+      color: var(--white);
+    }
+  }
+
+  &.faq__area {
+    .accordion-item {
+      background: transparent;
+      border-color: var(--gray);
+    }
+
+    .accordion-button {
+      box-shadow: none;
+      color: var(--white);
+      background-color: var(--dark-2);
+
+      &::after {
+        filter: invert(1);
+      }
+    }
+  }
+
+}

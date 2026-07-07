@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Banizzo HTML5 Template">
+  <title>Team Dark</title>
 
-  <!-- Site Title -->
-  <title>Banizzo - Digital Agency</title>
-
-  <!-- Site Favicon -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="assets/imgs/logo/favicon.png" type="image/x-icon">
 
 
@@ -28,6 +27,7 @@
   <link rel="stylesheet" href="assets/css/meanmenu.min.css">
   <link rel="stylesheet" href="assets/css/progressbar.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/progressbar.css">
   <link rel="stylesheet" href="assets/css/animate.min.css">
   <link rel="stylesheet" href="assets/css/master.css">
   <link rel="stylesheet" href="style.css">
@@ -292,136 +292,259 @@
   </div>
   <!-- Offcanvas area end -->
 
-<!-- Main area start -->
-<!-- Search area start -->
-<section class="hero__area">
-  <div class="container">
-    <div class="row">
-      <div class="col-xxl-12">
-        <div class="hero__content">
-          <h1 class="hero__sub-title cxufadeUp">Otaku Verse</h1>
-          <h2 class="hero__title cxufadeUp2">Search <br><span>Reviews.</span></h2>
-          <p class="cxufadeUp3">
-            Find anime, manga, and manhwa reviews submitted by the community.
-          </p>
+
+  <!-- Breadcrumb area start -->
+  <section class="breadcrumb__area">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-12">
+          <div class="breadcrumb__content">
+            <h1 class="breadcrumb__title wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Our Team</h1>
+            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="0.4s"><a href="index.html">Home</a>
+              <span>Our Team</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <img src="assets/imgs/hero/overlay.png" alt="overlay" class="overlay">
-  <img src="assets/imgs/hero/shape.png" alt="overlay" class="shape-1">
-  <img src="assets/imgs/hero/shape-2.png" alt="overlay" class="shape-2">
-</section>
-
-<section class="service__area pt-130 pb-130">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-xxl-8 col-xl-8 col-lg-10">
-        <div class="sec-title-wrap text-center">
-          <h2 class="sec-sub-title">Search Database</h2>
-          <h3 class="sec-title">Find A <span>Review.</span></h3>
-        </div>
-
-        <form id="searchForm" class="otaku-form search-form">
-          <input type="text" id="searchInput" placeholder="Search by title, genre, or type" required>
-          <button type="submit" class="cxu-btn-primary">SEARCH</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-xxl-12">
-        <div class="otaku-table-wrap">
-          <table class="otaku-table">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Type</th>
-                <th>Rating</th>
-                <th>Review</th>
-              </tr>
-            </thead>
-            <tbody id="resultsTable">
-              <tr>
-                <td colspan="5">Search results will appear here.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- Search area end -->
+    <img src="assets/imgs/hero/overlay.png" alt="overlay" class="overlay">
+  </section>
+  <!-- Breadcrumb area end -->
 
 
-
-
-<!-- Entry Form area start -->
-<section class="hero__area">
-  <div class="container">
-    <div class="row">
-      <div class="col-xxl-12">
-        <div class="hero__content">
-          <h1 class="hero__sub-title cxufadeUp">Otaku Verse</h1>
-          <h2 class="hero__title cxufadeUp2">Add <br><span>Anime Review.</span></h2>
-          <p class="cxufadeUp3">
-            Share a new anime, manga, or manhwa review with the community.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <img src="assets/imgs/hero/overlay.png" alt="overlay" class="overlay">
-  <img src="assets/imgs/hero/shape.png" alt="overlay" class="shape-1">
-  <img src="assets/imgs/hero/shape-2.png" alt="overlay" class="shape-2">
-</section>
-
-<section class="contact__area pt-130 pb-130">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-xxl-8 col-xl-8 col-lg-10">
-        <div class="sec-title-wrap text-center">
-          <h2 class="sec-sub-title">Community Review</h2>
-          <h3 class="sec-title">Submit A New <span>Review.</span></h3>
-        </div>
-
-        <form id="reviewForm" class="otaku-form">
-          <div class="row">
-            <div class="col-md-6">
-              <input type="text" id="title" placeholder="Anime / Manga Title" required>
-            </div>
-
-            <div class="col-md-6">
-              <input type="text" id="genre" placeholder="Genre" required>
-            </div>
-
-            <div class="col-md-6">
-              <input type="text" id="type" placeholder="Type: Anime, Manga, or Manhwa" required>
-            </div>
-
-            <div class="col-md-6">
-              <input type="number" id="rating" placeholder="Rating 1-10" min="1" max="10" required>
-            </div>
-
-            <div class="col-md-12">
-              <textarea id="review" placeholder="Write your review" required></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <button type="submit" class="cxu-btn-primary">SAVE REVIEW</button>
+  <!-- Team area start -->
+  <section class="team__area dark pt-130">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-12">
+          <div class="sec-title-wrap">
+            <h2 class="sec-sub-title wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Our Skilled Team
+            </h2>
+            <h3 class="sec-title wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">Meet
+              The <span>Leaders.</span></h3>
+          </div>
+          <div class="team__slider-wrap">
+            <div class="swiper team__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="team__slide wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <div class="team__info">
+                      <a href="team-detail.html"><img src="assets/imgs/team/1.png" alt="Client"></a>
+                      <ul class="team__social">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                      </ul>
+                    </div>
+                    <a href="team-detail.html">
+                      <h4 class="team__name">Dipok Hassa Kollol</h4>
+                      <h5 class="team__role">Developer</h5>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slide wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                    <div class="team__info">
+                      <a href="team-detail.html"><img src="assets/imgs/team/2.png" alt="Client"></a>
+                      <ul class="team__social">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                      </ul>
+                    </div>
+                    <a href="team-detail.html">
+                      <h4 class="team__name">Jonathon Fedrik</h4>
+                      <h5 class="team__role">Manager</h5>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slide wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                    <div class="team__info">
+                      <a href="team-detail.html"><img src="assets/imgs/team/3.png" alt="Client"></a>
+                      <ul class="team__social">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                      </ul>
+                    </div>
+                    <a href="team-detail.html">
+                      <h4 class="team__name">Nirob Aronno</h4>
+                      <h5 class="team__role">Designer</h5>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slide wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
+                    <div class="team__info">
+                      <a href="team-detail.html"><img src="assets/imgs/team/4.png" alt="Client"></a>
+                      <ul class="team__social">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                      </ul>
+                    </div>
+                    <a href="team-detail.html">
+                      <h4 class="team__name">Samrat Devnath </h4>
+                      <h5 class="team__role">UI/UX Designer</h5>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slide wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                    <div class="team__info">
+                      <a href="team-detail.html"><img src="assets/imgs/team/1.png" alt="Client"></a>
+                      <ul class="team__social">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                      </ul>
+                    </div>
+                    <a href="team-detail.html">
+                      <h4 class="team__name">Dipok Hassa Kollol</h4>
+                      <h5 class="team__role">Developer</h5>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team__slide wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                    <div class="team__info">
+                      <a href="team-detail.html"><img src="assets/imgs/team/2.png" alt="Client"></a>
+                      <ul class="team__social">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                      </ul>
+                    </div>
+                    <a href="team-detail.html">
+                      <h4 class="team__name">Nirob Aronno</h4>
+                      <h5 class="team__role">UI/UX Designer</h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Team area end -->
 
-        <p id="message" class="form-message"></p>
+
+  <!-- Experience area start -->
+  <section class="experience__area dark pt-130 pb-130">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+          <div class="experience__left">
+            <h2 class="sec-sub-title wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Skills & Experiences
+            </h2>
+            <h3 class="sec-title wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">People Compare To <br>
+              Our Team Leaders & <br> <span>Their Skills.</span></h3>
+            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">There are many variations of
+              passages of Lorem Ipsum available, the majority have suffered alteration in
+              some form, by injected humour. randomised words which don't look even slightly believable. It uses a
+              dictionary of over 200 Latin words, combined with </p>
+          </div>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+          <div class="experience__right">
+            <div class="experience__item wow animate__animated animate__fadeInUp" data-wow-delay="0.15s">
+              <div class="exp-active" data-width="90" data-target="100">Branding Designs</div>
+            </div>
+            <div class="experience__item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+              <div class="exp-active" data-width="70" data-target="100">Marketing</div>
+            </div>
+            <div class="experience__item wow animate__animated animate__fadeInUp" data-wow-delay="0.45s">
+              <div class="exp-active" data-width="95" data-target="100">Marketing</div>
+            </div>
+            <div class="experience__item wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+              <div class="exp-active" data-width="80" data-target="100">Corporate Solution</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Experience area end -->
+
+
+  <!-- Process area start -->
+  <section class="process__area-2 dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+          <div class="process__content-2 inherit-left">
+            <button data-bs-toggle="modal" data-bs-target="#workProcessModal2"><img src="assets/imgs/work-process/1.png"
+                alt="Icon"></button>
+          </div>
+        </div>
+
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+          <div class="process__left-3 pt-130 pb-130">
+            <h2 class="sec-sub-title wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Work Together</h2>
+            <h3 class="sec-title wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">Works Process With <br>
+              Team <span>Leaders</span></h3>
+            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">There are many variations of
+              passages of Lorem Ipsum available, the majority have suffered alteration in
+              some form, by injected humour. randomised words which don't look even slightly believable. It uses a
+              dictionary of over 200 Latin words, combined with </p>
+            <a href="contact.html" class="cxu-btn-round wow animate__animated animate__fadeInUp"
+              data-wow-delay="0.7s">JOIN THE TEAM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Process area end -->
+
+  <!-- Modal -->
+  <div class="modal dark fade modal__wkprocess" id="workProcessModal2" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button class="modal-close" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-body">
+          <iframe src="https://www.youtube.com/embed/CH50zuS8DD0" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
-</section>
-<!-- Entry Form area end -->
+
+
+  <!-- Brand area start -->
+  <section class="brand__area dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-12">
+          <div class="brand__list">
+            <div class="brand__item wow animate__animated animate__fadeInUp" data-wow-delay="0.15s">
+              <img src="assets/imgs/brand/1.png" alt="Brand Logo">
+            </div>
+            <div class="brand__item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+              <img src="assets/imgs/brand/2.png" alt="Brand Logo">
+            </div>
+            <div class="brand__item wow animate__animated animate__fadeInUp" data-wow-delay="0.45s">
+              <img src="assets/imgs/brand/3.png" alt="Brand Logo">
+            </div>
+            <div class="brand__item wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+              <img src="assets/imgs/brand/4.png" alt="Brand Logo">
+            </div>
+            <div class="brand__item wow animate__animated animate__fadeInUp" data-wow-delay="0.75s">
+              <img src="assets/imgs/brand/2.png" alt="Brand Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Brand area end -->
 
 
   <!-- Footer area start -->
@@ -480,7 +603,7 @@
     </div>
 
     <div class="footer__btm">
-      <p>© 2023 — Banizzo by <a href="https://codexup.com/">CodeXup</a>. All Rights Reserved.</p>
+      <p>© 2023 — Banizzo by ProBidyaStudio. All Rights Reserved.</p>
     </div>
   </footer>
   <!-- Footer area end -->
@@ -494,9 +617,9 @@
   <script src="assets/js/jquery.meanmenu.min.js"></script>
   <script src="assets/js/progressbar.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/progressbar.js"></script>
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="entry.js"></script>
 
 </body>
 

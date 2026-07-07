@@ -1,0 +1,50 @@
+/*----------------------------------------*/
+/*  06. TITLE CSS START
+/*----------------------------------------*/
+
+
+
+.sec-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--dark);
+  padding-bottom: 20px;
+  text-transform: uppercase;
+
+  @media #{$xl} {
+    font-size: 36px;
+  }
+
+  @media #{$lg} {
+    font-size: 28px;
+  }
+
+  span {
+    color: var(--primary);
+  }
+}
+
+
+.sec-sub-title {
+  font-size: 18px;
+  color: var(--primary);
+  font-weight: 700;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+
+// 
+// Dark Version
+// 
+.dark {
+  p {
+    color: #999;
+  }
+
+  .sec-title {
+    color: var(--white);
+  }
+
+
+}
