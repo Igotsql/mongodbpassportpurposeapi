@@ -1,0 +1,18 @@
+/*----------------------------------------*/
+/*  02. MIXIN DECLARATION
+/*----------------------------------------*/
+
+
+// Z Index 9
+@mixin zi-9 {
+  position: relative;
+  z-index: 9;
+}
+
+@mixin hover($color) {
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color;
+  }
+}

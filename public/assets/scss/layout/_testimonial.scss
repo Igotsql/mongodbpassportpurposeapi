@@ -1,0 +1,236 @@
+/*----------------------------------------*/
+/*  19. TESTIMONIAL CSS START
+/*----------------------------------------*/
+
+
+
+.testimonial {
+  &__area {
+    text-align: center;
+
+    &.pb-130 {
+      @media #{$sm} {
+        padding-bottom: 40px;
+      }
+    }
+
+    .sec-title-wrap {
+      position: relative;
+      margin-bottom: 30px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 220px;
+        height: 180px;
+        left: 260px;
+        background-image: url(../imgs/testimonial/quote.png);
+        background-repeat: no-repeat;
+        background-position: left;
+
+        @media #{$lg} {
+          left: 100px;
+        }
+
+        @media #{$md} {
+          left: 20px;
+        }
+
+        @media #{$sm} {
+          background-size: 120px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 220px;
+        height: 180px;
+        right: 260px;
+        top: 0;
+        background-image: url(../imgs/testimonial/quote-2.png);
+        background-repeat: no-repeat;
+        background-position: right;
+
+        @media #{$lg} {
+          right: 100px;
+        }
+
+        @media #{$md} {
+          right: 20px;
+        }
+
+        @media #{$sm} {
+          background-size: 120px;
+        }
+      }
+    }
+
+    .swiper-pagination-bullet {
+      border: 2px solid var(--gray-2);
+      background: transparent;
+      width: 18px;
+      height: 18px;
+      opacity: 1;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 2px;
+        left: 16px;
+        top: 6px;
+        background-color: var(--gray-2);
+      }
+
+      &:last-child {
+        &::before {
+          position: unset;
+        }
+      }
+
+      &-active {
+        border-color: var(--primary);
+        position: relative;
+
+        &::before {
+          background-color: var(--primary);
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 8px;
+          height: 8px;
+          left: 3px;
+          top: 3px;
+          border-radius: 100px;
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+
+  &__slider {
+    padding-bottom: 60px;
+
+    &_thumb {
+      max-width: 700px;
+
+      .swiper-slide {
+        width: 190px;
+        height: 190px;
+        background-color: var(--gray-2);
+        transform: rotate(45deg);
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          transform: rotate(-45deg);
+        }
+      }
+
+      .swiper-slide-thumb-active {
+        width: 290px;
+        height: 290px;
+
+        img {
+          border-radius: 15px;
+          z-index: 9;
+        }
+      }
+
+    }
+  }
+
+  &__slide {
+    max-width: 770px;
+    margin: 0 auto;
+
+    img {
+      margin-bottom: 30px;
+      border-radius: 100%;
+    }
+
+    p {
+      padding-bottom: 30px;
+
+      @media #{$sm} {
+        padding: 0 15px 30px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black-3);
+    padding-bottom: 5px;
+    text-transform: capitalize;
+  }
+
+  &__role {
+    font-size: 14px;
+    color: var(--gray);
+    text-transform: capitalize;
+  }
+
+  &__btn {
+    width: 130px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 9;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .btn {
+
+      &-prev,
+      &-next {
+        width: 50px;
+        height: 50px;
+        background: #e2e2e2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: var(--black-2);
+        border-radius: 50%;
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--white);
+          background: linear-gradient(to top, var(--primary), var(--secondary));
+        }
+      }
+    }
+  }
+}
+
+
+
+// 
+// Dark Version
+// 
+.dark {
+  &.testimonial__area {
+    background-color: var(--dark);
+  }
+
+  .testimonial {
+
+    &__name {
+      color: var(--white);
+    }
+
+    &__role {
+      color: var(--gray-2);
+    }
+  }
+}

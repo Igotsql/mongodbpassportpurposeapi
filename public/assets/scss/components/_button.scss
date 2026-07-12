@@ -1,0 +1,127 @@
+/*----------------------------------------*/
+/* 05. BUTTON CSS START
+/*----------------------------------------*/
+
+.cxu-btn {
+  &-primary {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--white);
+    font-family: $font_roboto;
+    padding: 16px 30px;
+    border-radius: 3px;
+    background-image: linear-gradient(to right, var(--primary) 25%, var(--secondary) 50%, var(--primary) 75%, var(--secondary) 100%);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    transition: all 0.5s;
+    text-transform: uppercase;
+
+    &:hover {
+      background-position: 100% 100%;
+      color: var(--white);
+    }
+  }
+
+  &-secondary {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--white);
+    font-family: $font_roboto;
+    padding: 18px 35px;
+    border-radius: 3px;
+    background-color: var(--black-3);
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--primary);
+    }
+  }
+
+  &-border {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    display: inline-block;
+    padding: 16px 28px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    border: 1px solid var(--white);
+
+    &:hover {
+      color: var(--white);
+      border-color: var(--secondary);
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+    }
+  }
+
+  &-round {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--white);
+    font-family: $font_roboto;
+    padding: 18px 30px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, var(--primary) 0%, var(--secondary) 33%, var(--primary) 67%, var(--secondary) 100%);
+    background-size: 300% 300%;
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s;
+
+    &:hover {
+      color: var(--white);
+      background-position: 100%, 100%;
+    }
+
+    &-2 {
+      display: inline-block;
+      width: 100%;
+      font-size: 16px;
+      color: var(--white);
+      padding: 18px 30px;
+      border-radius: 50px;
+      text-align: center;
+      background-image: linear-gradient(to right, var(--primary), var(--secondary));
+
+      &:hover {
+        color: var(--white);
+        background-image: linear-gradient(to right, var(--secondary), var(--primary));
+      }
+    }
+
+    &-dark {
+      display: inline-block;
+      width: 100%;
+      font-size: 16px;
+      color: var(--white);
+      padding: 18px 30px;
+      border-radius: 50px;
+      text-align: center;
+      background-color: var(--black-3);
+
+      &:hover {
+        color: var(--white);
+        background-image: linear-gradient(to right, var(--secondary), var(--primary));
+      }
+    }
+  }
+}
+
+
+.view-all {
+  font-size: 16px;
+  display: inline-block;
+  padding: 17px 26px;
+  border: 2px solid var(--white);
+  border-radius: 50px;
+  color: var(--white);
+  transition: all 0.3s;
+
+  @media #{$lg} {
+    font-size: 14px;
+    padding: 15px 22px;
+  }
+
+  &:hover {
+    color: var(--white);
+  }
+}

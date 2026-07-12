@@ -1,0 +1,84 @@
+/*----------------------------------------*/
+/* 03. TYPOGRAPHY CSS START
+/*----------------------------------------*/
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font_roboto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-family: $font_poppins;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray);
+}
+
+img {
+  max-width: 100%;
+}

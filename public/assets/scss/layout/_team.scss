@@ -1,0 +1,257 @@
+/*----------------------------------------*/
+/*  21. TEAM CSS START
+/*----------------------------------------*/
+
+
+
+.team {
+  &__area {
+    background-color: var(--white-4);
+
+    .sec-title-wrap {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__slide {
+    text-align: center;
+
+    &:hover {
+      .team__social {
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .team__name {
+        color: var(--primary);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__right {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-left: 50px;
+
+    @media #{$lg} {
+      padding-left: 20px;
+    }
+
+    @media #{$md} {
+      padding-top: 0;
+      padding-left: 0;
+    }
+
+    @media #{$sm} {
+      padding-top: 30px;
+    }
+
+    ul {
+      padding-bottom: 30px;
+
+      @media #{$lg} {
+        display: flex;
+      }
+    }
+
+    p {
+      padding-bottom: 15px;
+    }
+
+    button {
+      border: none;
+      margin-top: 30px;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black-3);
+    padding-bottom: 5px;
+    text-transform: capitalize;
+    transition: all 0.3s;
+
+    &-2 {
+      font-size: 32px;
+      color: var(--black-3);
+      padding-bottom: 5px;
+      text-transform: capitalize;
+      transition: all 0.3s;
+
+      @media #{$md} {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__role {
+    font-size: 16px;
+    color: var(--gray);
+    font-family: $font_roboto;
+    text-transform: capitalize;
+
+    &-2 {
+      font-size: 18px;
+      color: var(--gray);
+      padding-bottom: 10px;
+      text-transform: capitalize;
+    }
+  }
+
+  &__info {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 50px 20px 30px;
+    background-image: url(../imgs/team/bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    bottom: -30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+
+    @media #{$lg} {
+      opacity: 1;
+      bottom: 0;
+      visibility: visible;
+      padding: 60px 15px 15px;
+    }
+
+    @media #{$md} {
+      padding: 80px 15px 15px;
+    }
+
+    @media #{$sm} {
+      padding: 90px 15px 15px;
+    }
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: var(--white);
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        border: 1px solid var(--white);
+
+        &:hover {
+          color: var(--primary);
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+
+// Experience CSS
+.experience {
+  &__left {
+
+    p {
+      font-size: 16px;
+      padding-top: 10px;
+      padding-right: 30px;
+
+      @media #{$md} {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 30px;
+
+    @media #{$sm} {
+      padding-top: 30px;
+      padding-left: 0;
+    }
+  }
+
+  &__item {
+    padding-bottom: 15px;
+
+    @media #{$md} {
+      padding-bottom: 10px;
+    }
+
+    @media #{$sm} {
+      padding-bottom: 5px;
+    }
+
+    .sonny_progressbar p.title {
+      color: var(--black-2);
+    }
+
+    .sonny_progressbar .targetBar {
+      border-radius: 5px;
+    }
+  }
+
+}
+
+
+// 
+// Dark Version
+// 
+.dark {
+  &.team__area {
+    background-color: var(--dark);
+  }
+
+  .team {
+
+    &__name {
+      color: var(--white);
+
+      &-2 {
+        color: var(--white);
+      }
+    }
+
+    &__role {
+      color: var(--gray-2);
+
+      &-2 {
+        color: var(--gray-2);
+      }
+    }
+  }
+
+  .experience__item .sonny_progressbar p.title {
+    color: var(--white);
+  }
+
+  .sonny_progressbar .progress-percent {
+    color: var(--gray-6);
+  }
+
+}

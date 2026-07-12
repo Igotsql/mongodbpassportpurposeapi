@@ -1,0 +1,47 @@
+/*----------------------------------------*/
+/*  25. BRAND CSS START
+/*----------------------------------------*/
+
+
+
+.brand {
+  &__area {
+    padding: 100px 0;
+
+    @media #{$lg} {
+      padding: 80px 0;
+    }
+
+    @media #{$md} {
+      padding: 60px 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media #{$sm} {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+}
+
+
+
+// 
+// Dark Version
+// 
+.dark {
+  &.brand__area {
+    background-color: var(--dark);
+  }
+}

@@ -1,0 +1,223 @@
+/*----------------------------------------*/
+/*  10. MENU CSS START
+/*----------------------------------------*/
+
+
+.main-menu {
+  text-align: right;
+
+  @media #{$lg} {
+    display: none;
+  }
+
+  ul {
+    li {
+      display: inline-block;
+      padding: 0 20px;
+
+      &:hover {
+        .main-dropdown {
+          top: 80px;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .mega-menu {
+          top: 80px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 30px 3px;
+        color: var(--white);
+        font-size: 16px;
+        text-transform: capitalize;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  .main {
+    &-dropdown {
+      position: absolute;
+      width: 260px;
+      top: 100px;
+      background: var(--black-2);
+      padding: 20px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+      li {
+        padding: 0 30px;
+        display: block;
+        text-align: left;
+        position: relative;
+
+        &:hover {
+          .sub-dropdown {
+            left: 100%;
+            opacity: 1;
+            visibility: visible;
+
+            @media #{$xxl} {
+              left: -100%;
+            }
+          }
+        }
+
+        a {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  .sub {
+    &-dropdown {
+      position: absolute;
+      width: 260px;
+      left: 90%;
+      top: 0;
+      background: var(--black-2);
+      padding: 20px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+      @media #{$xxl} {
+        left: -90%;
+      }
+
+      li {
+        padding: 0 30px;
+        display: block;
+        text-align: left;
+        position: relative;
+
+        a {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  .has-dropdown {
+    position: relative;
+
+    &:hover {
+      &::after {
+        color: var(--primary);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "\f107";
+      width: 15px;
+      height: 15px;
+      top: 30px;
+      color: var(--white);
+      font-family: "Font Awesome 6 Free";
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+  }
+
+  .has-megamenu {
+    position: static;
+
+    &:hover {
+      &::after {
+        color: var(--primary);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "\f107";
+      width: 15px;
+      height: 15px;
+      top: 30px;
+      color: var(--white);
+      font-family: "Font Awesome 6 Free";
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+  }
+
+  .main-dropdown .has-dropdown {
+    position: relative;
+
+    &:hover {
+      &::after {
+        color: var(--primary);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "\f107";
+      width: 15px;
+      height: 15px;
+      top: 15px;
+      right: 20px;
+      color: var(--white);
+      transform: rotate(-90deg);
+      font-family: "Font Awesome 6 Free";
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+  }
+
+
+  // Mega Menu
+  .mega-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100px;
+    z-index: 9;
+    background-color: var(--black-2);
+    text-align: left;
+    padding: 40px 230px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+    @media #{$xxl} {
+      padding: 40px 50px;
+    }
+
+    @media #{$xl} {
+      padding: 40px 20px;
+    }
+
+    li {
+      display: block;
+
+      &:first-child {
+        font-size: 18px;
+        color: var(--white);
+        padding-bottom: 10px;
+        text-transform: capitalize;
+      }
+
+      a {
+        padding: 8px 5px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,229 @@
+/*----------------------------------------*/
+/*  13. OFFCANVAS CSS START
+/*----------------------------------------*/
+
+
+.offcanvas {
+  &__area {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -400px;
+    z-index: 99;
+    padding: 40px 30px;
+    background: var(--black-2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+
+    @media #{$sm} {
+      width: 350px;
+      right: -350px;
+    }
+
+    &.showed {
+      right: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__top {
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+
+    @media #{$xl} {
+      padding-bottom: 50px;
+    }
+
+    img {
+      max-width: 160px;
+      height: min-content;
+    }
+
+    button {
+      background-color: transparent;
+      width: 40px;
+      height: 40px;
+      color: var(--white);
+      border-radius: 50px;
+      font-size: 18px;
+      display: flex;
+      transition: all 0.3s;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--white-3);
+
+      &:hover {
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+    padding-bottom: 50px;
+
+    @media #{$lg} {
+      display: block;
+      height: 75vh;
+      overflow: scroll;
+    }
+  }
+
+  &-menu {
+    li {
+      a {
+        font-size: 15px;
+        color: var(--white);
+        text-transform: capitalize;
+        padding: 7px 0;
+        display: block;
+      }
+    }
+  }
+
+  &__map {
+    padding-bottom: 50px;
+
+    @media #{$xxl} {
+      padding-bottom: 40px;
+    }
+
+    @media #{$xl} {
+      padding-bottom: 30px;
+    }
+
+    @media #{$lg} {
+      display: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 220px;
+
+      @media #{$xl} {
+        height: 120px;
+      }
+    }
+  }
+
+  &__search {
+    padding-bottom: 100px;
+
+    @media #{$xl} {
+      padding-bottom: 70px;
+    }
+
+    @media #{$lg} {
+      display: none;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+    }
+  }
+
+  &__btm {
+    @media #{$lg} {
+      display: none;
+    }
+  }
+}
+
+
+// Close Offcanvas
+.close_offcanvas {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  font-size: 24px;
+  color: var(--black-2);
+  padding: 1px 11px;
+  cursor: pointer;
+  border: 1px solid var(--black-2);
+  border-radius: 100%;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  @media #{$lg} {
+    top: 20px;
+    right: 30px;
+  }
+
+  @media #{$md} {
+    top: 15px;
+    right: 20px;
+  }
+
+  @media #{$sm} {
+    top: 6px;
+    right: 25px;
+  }
+}
+
+
+// MeanMenu
+.mean-container {
+
+  .mean-nav>ul {
+    display: block !important;
+  }
+
+  .mean-bar {
+    padding: 0;
+    background: none;
+  }
+
+  .mean-nav {
+    width: 97%;
+
+    ul li a {
+      background-color: var(--black-2);
+      text-transform: capitalize;
+      border-color: rgba(255, 255, 255, 0.1);
+
+      :hover {
+        background-color: var(--black-2);
+      }
+    }
+
+    ul li li a {
+      opacity: 1;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    ul li a.mean-expand {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.1) !important;
+
+      &:hover {
+        background-color: var(--black-3);
+      }
+    }
+  }
+
+  a.meanmenu-reveal {
+    display: none !important;
+  }
+}
+
+
+
+// 
+// Dark Version
+// 
